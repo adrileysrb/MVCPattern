@@ -58,7 +58,6 @@ public class APIActivity extends AppCompatActivity {
         progress.setVisibility(View.GONE);
         list.setVisibility(View.VISIBLE);
         adapter.notifyDataSetChanged();
-        //Log.i("Nano", "TIME: "+System.nanoTime());
         Log.i("Nano", "TIME: "+System.currentTimeMillis());
     }
 
