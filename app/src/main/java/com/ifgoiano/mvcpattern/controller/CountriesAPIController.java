@@ -14,6 +14,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.observers.DisposableSingleObserver;
 import io.reactivex.schedulers.Schedulers;
 
+
+//Essas classes que tão com controler no final são as que estão pegando os dados
+//O nome no inicio indica da onde tá vindo os dados (Tirando o "Countries")
 public class CountriesAPIController {
 
     private APIActivity view;
@@ -26,8 +29,6 @@ public class CountriesAPIController {
     }
 
     private void fetchCountries() {
-        //Log.i("Nano", "TIME: "+System.nanoTime());
-        Log.i("Nano", "TIME: "+System.currentTimeMillis());
         service.getCountries()
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())

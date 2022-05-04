@@ -24,6 +24,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//Aqui faz conexão com o Firebase, a ideia no geral é a mesma do SQL
+// a unica diferença que esse é um banco de dados não relacional,
+// é muito semelhante ao banco que você utilizou no projeto da disciplina de Android
 public class CountriesRemoteRepositoryController {
     FirebaseFirestore db;
     private String COLLECTION_NAME = "countries";

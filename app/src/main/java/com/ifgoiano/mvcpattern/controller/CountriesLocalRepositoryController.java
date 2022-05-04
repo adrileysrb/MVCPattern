@@ -11,6 +11,7 @@ import com.ifgoiano.mvcpattern.model.Country;
 import java.util.ArrayList;
 import java.util.List;
 
+//Aqui é a classe do SQL, não tem muito o que dizer
 public class CountriesLocalRepositoryController extends SQLiteOpenHelper {
 
     private static final int    DATABASE_VERSION = 1;

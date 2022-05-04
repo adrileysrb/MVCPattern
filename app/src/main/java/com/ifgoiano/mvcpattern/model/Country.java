@@ -2,11 +2,12 @@ package com.ifgoiano.mvcpattern.model;
 
 import com.google.gson.annotations.SerializedName;
 
+//Classe model, o @SerializedName é para o banco de dados funcionar
 public class Country {
 
     private String id;
-
-    @SerializedName("name")
+    //name
+    @SerializedName("string")
     public String countryName;
 
     public Country(){}

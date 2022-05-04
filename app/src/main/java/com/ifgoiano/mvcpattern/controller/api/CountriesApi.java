@@ -8,6 +8,8 @@ import io.reactivex.Single;
 import retrofit2.http.GET;
 
 public interface CountriesApi {
-    @GET("all")
+
+    // "all"
+    @GET(" ")
     Single<List<Country>> getCountries();
 }

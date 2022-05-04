@@ -29,8 +29,11 @@ public class APIActivity extends AppCompatActivity {
     private Button retryButton;
     private ProgressBar progress;
 
+
+    //Essa é a tela que vai mostrar os dados da API
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("TIMESYSTEM", "TIME: "+System.currentTimeMillis());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mvc);
         setTitle("MVC Activity - API");
@@ -58,8 +61,8 @@ public class APIActivity extends AppCompatActivity {
         progress.setVisibility(View.GONE);
         list.setVisibility(View.VISIBLE);
         adapter.notifyDataSetChanged();
-        Log.i("Nano", "TIME: "+System.currentTimeMillis());
-    }
+        Log.i("TIMESYSTEM", "TIME: "+System.currentTimeMillis());
+        }
 
     public void onRetry(View view) {
         controller.onRefresh();
@@ -75,7 +78,8 @@ public class APIActivity extends AppCompatActivity {
         retryButton.setVisibility(View.VISIBLE);
     }
 
-    public static Intent getIntent(Context context) {
-        return new Intent(context, APIActivity.class);
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }
